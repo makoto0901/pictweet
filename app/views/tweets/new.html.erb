@@ -1,0 +1,14 @@
+<div class="contents row">
+  <!-- 登録値の入力欄をform_tagで囲う -->
+  <%= form_tag('/tweets', method: :post) do %>
+    <h3>
+      投稿する
+    </h3>
+    <!-- nameの値がparamsに入る -->
+    <input placeholder="Nickname" type="text" name="name">
+    <input placeholder="Image Url" type="text" name="image">
+    <textarea cols="30" name="text" placeholder="text" rows="10"></textarea>
+    <!-- form_tag内にsubmitを作る -->
+    <input type="submit" value="SENT">
+  <% end %>
+</div>
