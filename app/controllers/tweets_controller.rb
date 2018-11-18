@@ -1,6 +1,7 @@
 class TweetsController < ApplicationController
   def index
-    @tweets = Tweet.all;
+    # 逆順ソート、ソート時はall指定不要
+    @tweets = Tweet.order(created_at: "DESC");
   end
 
   def new
